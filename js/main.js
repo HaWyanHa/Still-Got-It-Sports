@@ -1,6 +1,6 @@
 (function () {
 	"use strict";
 
-	angular.module("football");
+	angular.module("football", []);
 
 })();

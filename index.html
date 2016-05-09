@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="football">
 <head>
 	<title>Sports League</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controllers/statController.js"></script>
+	<script src="js/factories/players.js"></script>
 
 </head>
 <body>
 
-	<table>
+	<table ng-controller="StatController as stuff">
 		<thead>
 			<tr>
 				<th></th>
@@ -33,8 +36,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
+			<tr ng-repeat="foo in stuff.player">
 				<th>Player Name</th>
+				<td>{{foo.name}}</td>
 			</tr>
 		</tbody>
 	</table>
