@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="football">
+<head>
+	<title>Sports League</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<script src="//connect.facebook.net/en_US/sdk.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a ui-sref="stat">My Account</li>
+			<li><a ui-sref="teams">Teams</a></li>
+			<li><a ui-sref="schedule">Schedule</a></li>
+			<li><a ui-sref="players">Players</a></li>
+			<li><a ui-sref="rules">League Rules</a></li>
+			<li><a ui-sref="contact">Contact Us</a></li>
+		</ul>
+	</nav>
+	<h1>Football</h1>
+	<section ui-view></section>
+
+</body>
+</html>

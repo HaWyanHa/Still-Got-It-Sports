@@ -7,7 +7,11 @@
 	LoginController.$inject = ["$state"];
 
 	function LoginController($state) {
-		$state.go("login");
+		this.login = function login(){
+			FB.login(function(response){
+				console.log("facebook info", response);
+			});
+		};
 	}
 
 
