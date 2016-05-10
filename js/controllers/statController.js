@@ -6,10 +6,16 @@
 		.controller("StatController", StatController);
 
 
-		StatController.$inject = ["League"];
+		StatController.$inject = ["PlayerService"];
 
-		function StatController(League) {
-			this.player = League.player;
+		function StatController(PlayerService) {
+			this.player = PlayerService.getAllPlayers;
+		
+			this.addPoints = function addPoints(player){
+			return (player.rec) + (player.rtd * 5) + (player.tackles) + (player.dint * 5) + (player.dtd * 7) + (player.comp) + (player.ptd * 3) - (player.pint * 3);
+
+			};
+
 		}
 
 })();

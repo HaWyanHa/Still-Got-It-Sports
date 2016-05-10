@@ -1,0 +1,26 @@
+	<table ng-controller="TeamController as tm">
+		<thead>
+			<tr>
+				<th></th>
+				<th>W</th>
+				<th>L</th>
+				<th>GB</th>
+				<th>PF</th>
+				<th>PA</th>
+				<th>Streak</th>
+				<th>Opp Record</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="bar in tm.team">
+				<td>{{bar.color}}</td>
+				<td>{{bar.wins}}</td>
+				<td>{{bar.loss}}</td>
+				<td>{{bar.gb}}</td>
+				<td>{{bar.pf}}</td>
+				<td>{{bar.pa}}</td>
+				<td>{{bar.streak}}</td>
+				<td>{{bar.opp}}</td>
+			</tr>
+		</tbody>
+	</table>

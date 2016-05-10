@@ -1,0 +1,40 @@
+<table ng-controller="StatController as stuff">
+		<thead>
+			<tr>
+				<th></th>
+				<th colspan="2">Receiving</th>
+				<th colspan="3">Defense</th>
+				<th colspan="3">Passing</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<th>Rec</th>
+				<th>TD</th>
+				<th>Tackles</th>
+				<th>Int</th>
+				<th>TD</th>
+				<th>Comp</th>
+				<th>TD</th>
+				<th>Int</th>
+				<th>Games Played</th>
+				<th>Fantasy Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="foo in stuff.player">
+				<td>{{foo.name}}</td>
+				<td>{{foo.rec}}</td>
+				<td>{{foo.rtd}}</td>
+				<td>{{foo.tackles}}</td>
+				<td>{{foo.dint}}</td>
+				<td>{{foo.dtd}}</td>
+				<td>{{foo.comp}}</td>
+				<td>{{foo.ptd}}</td>
+				<td>{{foo.pint}}</td>
+				<td>{{foo.gplay}}</td>
+				<td>{{stuff.addPoints(foo)}}</td>
+			</tr>
+		</tbody>
+	</table>

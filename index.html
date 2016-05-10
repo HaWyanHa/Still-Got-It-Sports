@@ -4,44 +4,29 @@
 	<title>Sports League</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<script src="js/app/main.module.js"></script>
 	<script src="js/controllers/statController.js"></script>
-	<script src="js/factories/players.js"></script>
+	<script src="js/factories/player.service.js"></script>
+	<script src="js/controllers/login.controller.js"></script>
+	<script src="js/controllers/team.controller.js"></script>
+	<script src="js/factories/team.service.js"></script>
 
 </head>
 <body>
-
-	<table ng-controller="StatController as stuff">
-		<thead>
-			<tr>
-				<th></th>
-				<th colspan="2">Receiving</th>
-				<th colspan="3">Defense</th>
-				<th colspan="3">Passing</th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>Name</th>
-				<th>Rec</th>
-				<th>TD</th>
-				<th>Tackles</th>
-				<th>Int</th>
-				<th>TD</th>
-				<th>Comp</th>
-				<th>TD</th>
-				<th>Int</th>
-				<th>Games Played</th>
-				<th>Fantasy Points</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="foo in stuff.player">
-				<th>Player Name</th>
-				<td>{{foo.name}}</td>
-			</tr>
-		</tbody>
-	</table>
+	<nav>
+		<ul>
+			<li><a ui-sref="stat">My Account</li>
+			<li><a ui-sref="teams">Teams</a></li>
+			<li><a ui-sref="login">Schedule</a></li>
+			<li><a ui-sref="login">Players</a></li>
+			<li><a ui-sref="login">League Rules</a></li>
+			<li><a ui-sref="login">Contact Us</a></li>
+			<li><a ui-sref="login">Login/Sign Up</a></li>
+		</ul>
+	</nav>
+	<h1>Football</h1>
+	<section ui-view></section>
 
 </body>
 </html>
