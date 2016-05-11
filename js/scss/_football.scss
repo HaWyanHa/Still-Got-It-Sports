@@ -1,3 +1,47 @@
-* {
-	background-color: blue;
+body {
+	background-color: #6B8144;
+	font-family: 'Lato', sans-serif;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.login {
+	float: right;
+	margin-bottom: 1%;
+}
+
+
+
+//navbar css
+nav {
+	clear: both;
+	background-color: rgba(0, 0, 0, 0.4);;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+	margin-top: 1em;
+}
+li {
+	display: inline;
+	font-size: 1em;
+	text-decoration: none;
+	padding: 2%;
+}
+
+li:nth-child(5){
+	padding-left: 15%;
+}
+li:nth-child(4){
+	padding-right: 15%;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+a:visited {
+	color: white;
+}
+
+.main-content{
+	background-color: #F5F5F5;
 }

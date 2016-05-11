@@ -3,6 +3,7 @@
 <head>
 	<title>Sports League</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 	<script src="//connect.facebook.net/en_US/sdk.js"></script>
@@ -10,6 +11,7 @@
 
 </head>
 <body>
+	<button ng-controller="LoginController as lc" class="login" ng-click="lc.login()">Login/Sign Up</button>
 	<nav>
 		<ul>
 			<li><a ui-sref="stat">My Account</li>
@@ -20,8 +22,8 @@
 			<li><a ui-sref="contact">Contact Us</a></li>
 		</ul>
 	</nav>
-	<h1>Football</h1>
-	<section ui-view></section>
-
+	<section class="main-content">
+		<section ui-view></section>
+	</section>
 </body>
 </html>
