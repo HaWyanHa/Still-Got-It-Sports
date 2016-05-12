@@ -1,40 +1,40 @@
-	<table>
+	<table class="table table-striped table-hover">
 		<thead>
 			<tr>
 				<th></th>
-				<th colspan="2">Receiving</th>
-				<th colspan="3">Defense</th>
-				<th colspan="3">Passing</th>
+				<th class="right-border center" colspan="2">Receiving</th>
+				<th class="right-border center" colspan="3">Defense</th>
+				<th class="right-border center" colspan="3">Passing</th>
 				<th></th>
 				<th></th>
 			</tr>
 			<tr>
 				<th><a href="#" ng-click="stuff.sortType = 'name'; stuff.sortReverse = !stuff.sortReverse">Name</a></th>
 				<th><a href="#" ng-click="stuff.sortType = 'rec'; stuff.sortReverse = !stuff.sortReverse">Rec</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'rtd'; stuff.sortReverse = !stuff.sortReverse">TD</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'tackles'; stuff.sortReverse = !stuff.sortReverse">Tackles</a></th>
+				<th class="right-border"><a href="#" ng-click="stuff.sortType = 'rtd'; stuff.sortReverse = !stuff.sortReverse">TD</a></th>
+				<th class="center"><a href="#" ng-click="stuff.sortType = 'tackles'; stuff.sortReverse = !stuff.sortReverse">Tackles</a></th>
 				<th><a href="#" ng-click="stuff.sortType = 'dint'; stuff.sortReverse = !stuff.sortReverse">Int</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'dtd'; stuff.sortReverse = !stuff.sortReverse">TD</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'comp'; stuff.sortReverse = !stuff.sortReverse">Comp</a></th>
+				<th class="right-border"><a href="#" ng-click="stuff.sortType = 'dtd'; stuff.sortReverse = !stuff.sortReverse">TD</a></th>
+				<th class="center"><a href="#" ng-click="stuff.sortType = 'comp'; stuff.sortReverse = !stuff.sortReverse">Comp</a></th>
 				<th><a href="#" ng-click="stuff.sortType = 'ptd'; stuff.sortReverse = !stuff.sortReverse">TD</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'pint'; stuff.sortReverse = !stuff.sortReverse">Int</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'gplay'; stuff.sortReverse = !stuff.sortReverse">Games Played</a></th>
-				<th><a href="#" ng-click="stuff.sortType = 'stuff.addPoints'; stuff.sortReverse = !stuff.sortReverse">Fantasy Points</a></th>
+				<th class="right-border"><a href="#" ng-click="stuff.sortType = 'pint'; stuff.sortReverse = !stuff.sortReverse">Int</a></th>
+				<th class="center"><a href="#" ng-click="stuff.sortType = 'gplay'; stuff.sortReverse = !stuff.sortReverse">Games Played</a></th>
+				<th class="center"><a href="#" ng-click="stuff.sortType = 'stuff.addPoints'; stuff.sortReverse = !stuff.sortReverse">Fantasy Points</a></th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="foo in stuff.player | orderBy:stuff.addPoints:stuff.sortReverse">
-				<td>{{foo.name}}</td>
+				<td>{{$index + 1}}. <a href="#">{{foo.name}}</a></td>
 				<td>{{foo.rec}}</td>
-				<td>{{foo.rtd}}</td>
-				<td>{{foo.tackles}}</td>
+				<td class="right-border">{{foo.rtd}}</td>
+				<td class="center">{{foo.tackles}}</td>
 				<td>{{foo.dint}}</td>
-				<td>{{foo.dtd}}</td>
-				<td>{{foo.comp}}</td>
+				<td class="right-border">{{foo.dtd}}</td>
+				<td class="center">{{foo.comp}}</td>
 				<td>{{foo.ptd}}</td>
-				<td>{{foo.pint}}</td>
-				<td>{{foo.gplay}}</td>
-				<td>{{stuff.addPoints(foo)}}</td>
+				<td class="right-border">{{foo.pint}}</td>
+				<td class="center">{{foo.gplay}}</td>
+				<td class="center">{{stuff.addPoints(foo)}}</td>
 			</tr>
 		</tbody>
 	</table>

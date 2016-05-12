@@ -34,12 +34,31 @@ li:nth-child(5){
 li:nth-child(4){
 	padding-right: 15%;
 }
-a {
+table a {
 	text-decoration: none;
 	color: black;
 }
-a:visited {
+table a:visited {
 	color: black;
+}
+table td a {
+	color: blue;
+}
+table td a:visited {
+	color: blue;
+}
+.right-border {
+	border-right: 1px solid #d5d5d5;
+}
+.center {
+	text-align: center;
+}
+nav a {
+	text-decoration: none;
+	color: white;
+}
+nav a:visited {
+	color: white;
 }
 
 .main-content{
