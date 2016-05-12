@@ -4,27 +4,25 @@
 	angular.module("football")
 		.controller("LoginController", LoginController);
 
-	LoginController.$inject = ["$state"];
+	LoginController.$inject = ["$state", "LoginService"];
 
-	function LoginController($state) {
-		this.login = function login(){
-			FB.login(function(loginResponse){
-				console.log(loginResponse);
-				console.log(loginResponse.authResponse);
+	function LoginController($state, LoginService) {
+		var that = this;
+		this.login = function login() {
+			LoginService.login(function(name, profilePic){
+				console.log(name, profilePic);
+				that.userData.profilePic = profilePic;
 
-
-				FB.api(
-				    "/" + loginResponse.authResponse.userID + "?fields=id,name,picture",
-				    function (userResponse) {
-				      if (userResponse && !userResponse.error) {
-				        /* handle the result */
-				        console.log(userResponse);
-				      }
-				    }
-				);
+				that.userData.name = name;
 			});
+		// $state.go("account");
+			
 		};
+
+		
+		this.userData = LoginService.userData();	
 	}
+
 
 
 })();

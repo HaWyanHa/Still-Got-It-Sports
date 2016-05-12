@@ -16,6 +16,9 @@
 
 			};
 
+			this.sortType = "rec";
+			this.sortReverse = false;
+
 		}
 
 })();

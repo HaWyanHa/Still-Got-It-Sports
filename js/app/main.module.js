@@ -20,16 +20,27 @@
 	                controller: "LoginController",
 	                controllerAs: "lc"
 	            })	        
-	        	.state("stat", {
-	        		url: "/stat",
-	        		templateUrl: 'stat/stat.html'
+	        	.state("account", {
+	        		url: "/account",
+	        		templateUrl: 'html/account.html',
+	        		controller: "LoginController",
+	        		controllerAs: "lc"
 	        	})
     
 	        	.state("teams", {
 	        		url: "/teams",
-	        		templateUrl: "html/teams.html"
+	        		templateUrl: "html/teams.html",
+	        		controller: "TeamController",
+	        		controllerAs: "tm"
 	        	})
-	       
+
+	       		.state("players", {
+	       			url: "/players",
+	       			templateUrl: "html/players.html",
+	       			controller: "StatController",
+	       			controllerAs: "stuff"
+	       		})
+
 	        	.state("schedule", {
 	        		url: "/schedule",
 	        		templateUrl: "html/schedule.html"
