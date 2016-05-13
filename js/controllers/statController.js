@@ -12,8 +12,20 @@
 			this.player = PlayerService.getAllPlayers;
 		
 			this.addPoints = function addPoints(player){
-			return (player.rec) + (player.rtd * 5) + (player.tackles) + (player.dint * 5) + (player.dtd * 7) + (player.comp) + (player.ptd * 3) - (player.pint * 3);
+				var rec = player.rec;
+				var rtd = player.rtd;
+				var tackles = player.tackles;
+				var dint = player.dint;
+				var dtd = player.dtd;
+				var comp = player.comp;
+				var ptd = player.ptd;
+				var pint = player.pint;
 
+				if (player.female) {
+					return rec + (rtd * 7) + tackles + (dint * 10) + (dtd * 10) + comp + (ptd * 5) - (pint * 3);
+				} else {
+					return rec + (rtd * 5) + tackles + (dint * 5) + (dtd * 7) + comp + (ptd * 3) - (pint * 3);
+				}
 			};
 
 			this.sortType = this.addPoints;
