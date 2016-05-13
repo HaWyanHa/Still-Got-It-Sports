@@ -16,8 +16,9 @@
 
 			};
 
-			this.sortType = "rec";
+			this.sortType = this.addPoints;
 			this.sortReverse = false;
+			this.searchPlayer = "";
 
 		}
 

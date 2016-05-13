@@ -34,6 +34,35 @@ li:nth-child(5){
 li:nth-child(4){
 	padding-right: 15%;
 }
+form {
+	background-color: #6B8144;
+	margin-right: 0;
+	padding-bottom: 1em
+}
+
+.players {
+	background-color: #6B8144;
+	float: left;
+	padding: 0 18em 38px 1em;
+}
+input {
+	background-color: #6B8144;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	font-size: 2em;
+	margin-top: 18px;
+	margin-bottom: 16px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+.fa {
+	font-size: 2em;
+	opacity: 0.5;
+}
+
 table a {
 	text-decoration: none;
 	color: black;
@@ -64,3 +93,4 @@ nav a:visited {
 .main-content{
 	background-color: #F5F5F5;
 }
+//Search Bar
