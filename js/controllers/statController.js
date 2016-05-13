@@ -9,7 +9,7 @@
 		StatController.$inject = ["PlayerService"];
 
 		function StatController(PlayerService) {
-			this.player = PlayerService.getAllPlayers;
+			this.player = PlayerService.allPlayers;
 		
 			this.addPoints = function addPoints(player){
 				var rec = player.rec;
@@ -29,8 +29,17 @@
 			};
 
 			this.sortType = this.addPoints;
-			this.sortReverse = false;
+			this.sortReverse = true;
 			this.searchPlayer = "";
+			
+			this.recPoints = function recPoints(player) {
+
+				if (player.female) {
+					return player.rec + (player.rtd * 7);
+				} else {
+					return player.rec + (player.rtd * 5);
+				}
+			};
 
 		}
 
