@@ -94,6 +94,6 @@
 			</tr>
 		</tbody>
 	</table>
-	<ul  ng-repeat="foo in stuff.player | orderBy:stuff.addPoints:stuff.sortReverse | limitTo:4 | filter:{female:true}">
+	<ul  ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:4 | filter:{female:true}">
 		<li>{{foo.name}}</li>
 	</ul>
