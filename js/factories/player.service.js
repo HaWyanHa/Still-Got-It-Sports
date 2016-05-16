@@ -26,10 +26,15 @@
 		function PlayerService ($firebaseArray){
 			var playersLink = new Firebase("https://fiery-torch-4227.firebaseio.com/");
 			var players = $firebaseArray(playersLink);
-			
+
 			return {
-				allPlayers: players
+				allPlayers: players,
+				createPlayer: createPlayer
 			};
+
+			function createPlayer(playerName) {
+				players.$add({name: playerName});
+			}
 		}
 
 

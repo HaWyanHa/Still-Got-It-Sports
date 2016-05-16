@@ -31,6 +31,7 @@
 			this.sortType = this.addPoints;
 			this.sortReverse = true;
 			this.searchPlayer = "";
+			this.playerName = "";
 			
 			this.recPoints = function recPoints(player) {
 
@@ -56,6 +57,10 @@
 				} else {
 					return player.comp + (player.ptd * 3) - (player.pint * 3);
 				}
+			};
+
+			this.newPlayer = function newPlayer () {
+				PlayerService.createPlayer(this.playerName);
 			};
 
 		}

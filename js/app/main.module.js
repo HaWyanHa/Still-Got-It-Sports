@@ -45,11 +45,17 @@
 	        		url: "/schedule",
 	        		templateUrl: "html/schedule.html"
 	        	})
-	     
+	     		.state("admin", {
+	     			url:"/admin",
+	     			templateUrl: "html/admin.html",
+	     			controller: "StatController",
+	     			controllerAs: "stuff"
+	     		})
 	        	.state("contact", {
 	        		url: "/contact",
 	        		templateUrl: "html/contact.html"
 	        	});
+
 	    }
 
 function footballInit(){
