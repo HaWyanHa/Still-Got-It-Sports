@@ -1,12 +1,12 @@
 (function () {
 	"use strict";
 
-	angular.module("football", ["ui.router"])  //built by someone else using state.go()
+	angular.module("football", ["ui.router", "firebase"])  //built by someone else using state.go()
 		.config(footballConfig)  //config file is how UI finds what to do
 		.run(footballInit);
 
 
-	footballConfig.$inject = ['$stateProvider', '$urlRouterProvider'];   //why?
+	footballConfig.$inject = ['$stateProvider', '$urlRouterProvider'];  
 
 
 	    function footballConfig($stateProvider, $urlRouterProvider) {

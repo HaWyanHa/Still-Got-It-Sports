@@ -28,7 +28,7 @@
 				}
 			};
 
-			this.sortType = this.addPoints;
+			this.sortType = "";
 			this.sortReverse = true;
 			this.searchPlayer = "";
 			

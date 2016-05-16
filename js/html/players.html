@@ -79,7 +79,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="foo in stuff.player | orderBy:stuff.addPoints:stuff.sortReverse | filter:stuff.searchPlayer">
+			<tr ng-repeat="foo in stuff.player | orderBy:stuff.sortType:stuff.sortReverse | filter:stuff.searchPlayer">
 				<td>{{$index + 1}}. <a href="#">{{foo.name}}</a></td>
 				<td>{{foo.rec}}</td>
 				<td class="right-border">{{foo.rtd}}</td>
