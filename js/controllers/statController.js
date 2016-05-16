@@ -35,7 +35,7 @@
 			
 			this.recPoints = function recPoints(player) {
 
-				if (player.female) {
+				if (player.gender === "female") {
 					return player.rec + (player.rtd * 7);
 				} else {
 					return player.rec + (player.rtd * 5);
@@ -44,7 +44,7 @@
 
 			this.defPoints = function defPoints(player) {
 
-				if (player.female) {
+				if (player.gender === "female") {
 					return player.tackles + (player.dint * 10) + (player.dtd * 10);
 				} else {
 					return player.tackles + (player.dint * 5) + (player.dtd * 7);
@@ -52,7 +52,7 @@
 			};
 
 			this.pasPoints = function pasPoints(player) {
-				if (player.female) {
+				if (player.gender === "female") {
 					return player.comp + (player.ptd * 5) - (player.pint * 3);
 				} else {
 					return player.comp + (player.ptd * 3) - (player.pint * 3);
@@ -60,7 +60,7 @@
 			};
 
 			this.newPlayer = function newPlayer () {
-				PlayerService.createPlayer(this.playerName);
+				PlayerService.createPlayer(this.playerName, this.gender);
 			};
 
 		}
