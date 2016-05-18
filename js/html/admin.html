@@ -1,11 +1,11 @@
-<form>
-   <input type="text" placeholder="Name?" ng-model="stuff.playerName">
+<form name="playerForm">
+   <input type="text" placeholder="Name??" ng-model="stuff.playerName">
 	<select required ng-model="stuff.gender">
 		<option value="" disabled selected>gender</option>
 		<option>male</option>
 		<option>female</option>
 	</select>
-   <button ng-click="stuff.newPlayer()">
+   <button ng-click="stuff.newPlayer(playerForm)">
   		save
 	</button>
 </form>

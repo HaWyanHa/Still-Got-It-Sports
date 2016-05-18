@@ -59,8 +59,11 @@
 				}
 			};
 
-			this.newPlayer = function newPlayer () {
+			this.newPlayer = function newPlayer (playerForm) {
+				console.log(playerForm);
 				PlayerService.createPlayer(this.playerName, this.gender);
+				this.playerName="";
+				this.gender="";
 			};
 
 			this.editPlayer = function editPlayer(playerStats) {

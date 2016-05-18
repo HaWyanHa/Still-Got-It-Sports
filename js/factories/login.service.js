@@ -16,7 +16,7 @@
 
 			function login(callback){
 				FB.login(function(loginResponse){
-					// console.log(loginResponse);
+					console.log(loginResponse);
 					// console.log(loginResponse.authResponse);
  
 
