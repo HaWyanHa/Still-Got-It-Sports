@@ -56,7 +56,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:5 | filter:{female:false}">
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
 								<td>{{foo.name}}</td>
 								<td>{{foo.rec}}</td>
 								<td>{{foo.rtd}}</td>
@@ -80,7 +80,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:5 | filter:{female:false}">
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
 								<td>{{foo.name}}</td>
 								<td>{{foo.tackles}}</td>
 								<td>{{foo.dint}}</td>
@@ -105,7 +105,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:5 | filter:{female:false}">
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
 								<td>{{foo.name}}</td>
 								<td>{{foo.comp}}</td>
 								<td>{{foo.ptd}}</td>
@@ -132,7 +132,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:7 | filter:{female:true}">
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:7 | filter:{gender:'female'}">
 								<td>{{foo.name}}</td>
 								<td>{{foo.rec}}</td>
 								<td>{{foo.rtd}}</td>
@@ -156,7 +156,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:7 | filter:{female:true}">
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:7 | filter:{gender:'female'}">
 								<td>{{foo.name}}</td>
 								<td>{{foo.tackles}}</td>
 								<td>{{foo.dint}}</td>
@@ -181,7 +181,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:7 | filter:{female:true}">
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:7 | filter:{gender:'female'}">
 								<td>{{foo.name}}</td>
 								<td>{{foo.comp}}</td>
 								<td>{{foo.ptd}}</td>

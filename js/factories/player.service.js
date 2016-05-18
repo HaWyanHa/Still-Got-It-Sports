@@ -4,7 +4,7 @@
 	angular.module("football")
 		.factory("PlayerService", PlayerService);
 
-		PlayerService.$inject = ["$firebaseArray"];
+		PlayerService.$inject = ["$firebaseArray", "$firebaseObject"];
 
 		// var players = [
 		// 	{ "name": "Ryan", "rec": 11, "rtd": 3, "tackles": 14, "dint": 1, "dtd": 0, "comp": 0, "ptd": 0, "pint": 0, "gplay": 1, "gender": "male"  },
@@ -23,17 +23,30 @@
 		// 	{ "name": "Dana", "rec": 10, "rtd": 2, "tackles": 5, "dint": 0, "dtd": 0, "comp": 13, "ptd": 2, "pint": 1, "gplay": 1, "gender": "male"  }
 		// ];
 
-		function PlayerService ($firebaseArray){
+		function PlayerService ($firebaseArray, $firebaseObject){
 			var playersLink = new Firebase("https://fiery-torch-4227.firebaseio.com/");
 			var players = $firebaseArray(playersLink);
 
 			return {
 				allPlayers: players,
-				createPlayer: createPlayer
+				createPlayer: createPlayer,
+				savePlayer: savePlayer,
+				deletePlayer: deletePlayer
 			};
 
 			function createPlayer(playerName, gender) {
 				players.$add({name: playerName, rec: 0, rtd: 0, tackles: 0, dint: 0, dtd: 0, comp: 0, ptd: 0, pint: 0, gplay: 0, gender: gender});
+			}
+
+			function savePlayer(playerStats){
+				var playerObject = new Firebase("https://fiery-torch-4227.firebaseio.com/" + playerStats.$id);
+				playerObject.update({"rec": playerStats.rec, "rtd": playerStats.rtd, "tackles": playerStats.tackles, "dint": playerStats.dint, "dtd": playerStats.dtd, "comp": playerStats.comp, "ptd": playerStats.ptd, "pint": playerStats.pint, "gplay": playerStats.gplay});
+			}
+
+			function deletePlayer(playerStats) {
+				console.log(playerStats);
+				var playerObject = new Firebase("https://fiery-torch-4227.firebaseio.com/" + playerStats.$id);
+				$firebaseObject(playerObject).$remove();
 			}
 		}
 

@@ -10,7 +10,7 @@
 
 		function StatController(PlayerService) {
 			this.player = PlayerService.allPlayers;
-		
+
 			this.addPoints = function addPoints(player){
 				var rec = player.rec;
 				var rtd = player.rtd;
@@ -21,7 +21,7 @@
 				var ptd = player.ptd;
 				var pint = player.pint;
 
-				if (player.female) {
+				if (player.gender === "female") {
 					return rec + (rtd * 7) + tackles + (dint * 10) + (dtd * 10) + comp + (ptd * 5) - (pint * 3);
 				} else {
 					return rec + (rtd * 5) + tackles + (dint * 5) + (dtd * 7) + comp + (ptd * 3) - (pint * 3);
@@ -62,6 +62,17 @@
 			this.newPlayer = function newPlayer () {
 				PlayerService.createPlayer(this.playerName, this.gender);
 			};
+
+			this.editPlayer = function editPlayer(playerStats) {
+				console.log("saving player info", playerStats);
+				PlayerService.savePlayer(playerStats); 
+			};
+
+			this.removePlayer = function removePlayer(playerStats){
+				console.log("hello");
+				PlayerService.deletePlayer(playerStats);
+			};
+
 
 		}
 

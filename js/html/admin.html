@@ -9,3 +9,134 @@
   		save
 	</button>
 </form>
+
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th></th>
+				<th class="right-border center" colspan="2">Receiving</th>
+				<th class="right-border center" colspan="3">Defense</th>
+				<th class="right-border center" colspan="3">Passing</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					<a>Rec
+        			</a>
+        		</th>
+				<th class="right-border">
+					TD
+				</th>
+				<th class="center">
+					Tackles
+				</th>
+				<th>
+					Int
+				</th>
+				<th class="right-border">
+					TD
+				</th>
+				<th class="center">
+					Comp
+				</th>
+				<th>
+					TD
+				</th>
+				<th class="right-border">
+					Int
+				</th>
+				<th class="center">
+					Games Played
+				</th>
+				<th class="center">
+					Fantasy Points
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="playerStats in stuff.player | orderBy: 'name'">
+				<td>{{$index + 1}}. <a href="#">{{playerStats.name}}</a></td>
+				<td ng-model="editedPlayerStats.rec">{{playerStats.rec}}
+					<button ng-click="playerStats.rec = playerStats.rec+1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.rec = (playerStats.rec > 0) ? playerStats.rec - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.rtd" class="right-border">{{playerStats.rtd}}
+					<button ng-click="playerStats.rtd = playerStats.rtd + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.rtd = (playerStats.rtd > 0) ? playerStats.rtd - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.tackles" class="center">{{playerStats.tackles}}
+					<button ng-click="playerStats.tackles = playerStats.tackles + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.tackles = (playerStats.tackles > 0) ? playerStats.tackles - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.dint">{{playerStats.dint}}
+					<button ng-click="playerStats.dint = playerStats.dint + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.dint = (playerStats.dint > 0) ? playerStats.dint - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.dtd" class="right-border">{{playerStats.dtd}}
+					<button ng-click="playerStats.dtd = playerStats.dtd + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.dtd = (playerStats.dtd > 0) ? playerStats.dtd - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.comp" class="center">{{playerStats.comp}}
+					<button ng-click="playerStats.comp = playerStats.comp + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.comp = (playerStats.comp > 0) ? playerStats.comp - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.ptd">{{playerStats.ptd}}
+					<button ng-click="playerStats.ptd = playerStats.ptd + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.ptd = (playerStats.ptd > 0) ? playerStats.ptd - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.pint" class="right-border">{{playerStats.pint}}
+					<button ng-click="playerStats.pint = playerStats.pint + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.pint = (playerStats.pint > 0) ? playerStats.pint - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td ng-model="editedPlayerStats.gplay" class="center">{{playerStats.gplay}}
+					<button ng-click="playerStats.gplay = playerStats.gplay + 1">
+						<i class="glphicon glyphicon-plus"></i>
+					</button>
+					<button ng-click="playerStats.gplay = (playerStats.gplay > 0) ? playerStats.gplay - 1 : 0;">
+						<i class="glphicon glyphicon-minus"></i>
+					</button>
+				</td>
+				<td class="center">{{stuff.addPoints(playerStats)}}</td>
+				<td>
+					<button ng-click="stuff.editPlayer(playerStats)">Save</button>
+					<button ng-click="stuff.removePlayer(playerStats)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
