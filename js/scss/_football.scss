@@ -10,6 +10,9 @@ body {
 	margin-bottom: 1%;
 }
 
+img {
+	max-width: 100%;
+}
 
 //navbar css
 nav {
@@ -95,4 +98,18 @@ nav a:visited {
 //Search Bar
 .table-width {
 	width: 80%;
+}
+
+//player of the week
+.player-week img{
+	margin-top: 20px;
+	background-color: black;
+	// max-width: 90%;
+}
+.player-week h4{
+	margin-top: 20px;
+}
+
+.home-team{
+	text-align: right;
 }
