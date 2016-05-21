@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<article class="col-md-8">
-				<h2>Standings</h2>
+					<h2 class="standings"><div class="standings-bar">Standings</div></h2>
 				<table ng-controller="TeamController as tm" class="table table-striped">
 					<thead>
 						<tr>
@@ -57,8 +57,8 @@
 <div class="container-fluid">			
 	<div class="container">
 		<div class="row">
-			<section>
-					<h2>League Leaders</h2>
+			<section class="col-md-12">
+					<h2 class="leaders"><div class="leaders-bar">League Leaders</div></h2>
 					<h3>Men's Leaders</h3>
 				<article class="col-md-4">
 					<table ng-controller="StatController as stuff" class="table table-striped">
@@ -216,132 +216,147 @@
 <div class="container-fluid">
 	<div class="container">
 		<div class="row">
-			<h2>Week 13 Matchups</h2>
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-5">
-						<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
+			<section class="col-md-12">
+				<h2>Week 13 Matchups</h2>
+				<br>
+				<article>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-5">
+								<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
+							</div>
+							<div class="col-md-7">
+								<h4>Blue Team</h4>
+								<p>10-2</p>
+								<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+								<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-7">
-						<h4>Blue Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+					<div class="col-md-4">
+						
+					</div>
+					<div class="col-md-4">
+						<div class="row home-team">
+							<div class="col-md-7">
+								<h4>Red Team</h4>
+								<p>10-2</p>
+								<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+								<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+							</div>
+							<div class="col-md-5">
+								<img src="http://fullhdpictures.com/wp-content/uploads/2015/05/Atlanta-Falcons-Logo.jpg">
+							</div>
+						</div>
+					</div>
+				</article>
+			<br>
+			<article class="row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-5">
+							<img src="http://www.sports-logos-screensavers.com/user/Miami_Dolphins_2013.jpg">
+						</div>
+						<div class="col-md-7">
+							<h4>Green Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				
-			</div>
-			<div class="col-md-4">
-				<div class="row home-team">
-					<div class="col-md-7">
-						<h4>Red Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-					<div class="col-md-5">
-						<img src="http://fullhdpictures.com/wp-content/uploads/2015/05/Atlanta-Falcons-Logo.jpg">
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-4">
+					<div class="row home-team">
+						<div class="col-md-7">
+							<h4>White Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+						<div class="col-md-5">
+							<img src="http://cdn-7.famouslogos.us/images/dallas-cowboys-logo.jpg">
+						</div>
 					</div>
 				</div>
+			</article>			
 			</div>
+			<br>
+			<article class="row">
+			
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-5">
+							<img src="http://logodatabases.com/wp-content/uploads/2012/05/oakland-raiders-logo-wallpaper.jpg">
+						</div>
+						<div class="col-md-7">
+							<h4>Black Table</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-4">
+					<div class="row home-team">
+						<div class="col-md-7">
+							<h4>Yellow Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+						<div class="col-md-5">
+							<img src="http://www.findthatlogo.com/wp-content/uploads/2011/10/green-bay-packers-logo-nfl.gif">
+						</div>
+					</div>
+				</div>			
+			</article>
+			<br>
+			<article class="row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-5">
+							<img src="http://vignette1.wikia.nocookie.net/callofduty/images/a/a1/Minnesota-Vikings-Logo.jpg/revision/latest?cb=20111111055412">
+						</div>
+						<div class="col-md-7">
+							<h4>Purple Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-4">
+					<div class="row home-team">
+						<div class="col-md-7">
+							<h4>Brown Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+						<div class="col-md-5">
+							<img src="http://614now.com/wp-content/uploads/2015/02/10996996_10153153864099684_1139852189341442151_n-e1424809134882.jpg">
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>			
 		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-5">
-						<img src="http://www.sports-logos-screensavers.com/user/Miami_Dolphins_2013.jpg">
-					</div>
-					<div class="col-md-7">
-						<h4>Green Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				
-			</div>
-			<div class="col-md-4">
-				<div class="row home-team">
-					<div class="col-md-7">
-						<h4>White Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-					<div class="col-md-5">
-						<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
-					</div>
-				</div>
-			</div>			
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-5">
-						<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
-					</div>
-					<div class="col-md-7">
-						<h4>Blue Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				
-			</div>
-			<div class="col-md-4">
-				<div class="row home-team">
-					<div class="col-md-7">
-						<h4>Blue Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-					<div class="col-md-5">
-						<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
-					</div>
-				</div>
-			</div>			
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="row">
-					<div class="col-md-5">
-						<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
-					</div>
-					<div class="col-md-7">
-						<h4>Blue Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				
-			</div>
-			<div class="col-md-4">
-				<div class="row home-team">
-					<div class="col-md-7">
-						<h4>Blue Team</h4>
-						<p>10-2</p>
-						<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
-						<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
-					</div>
-					<div class="col-md-5">
-						<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
-					</div>
-				</div>
-			</div>			
-		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+	<h2>Last Weeks Highlights</h2>
+	<iframe col-md-12 src="http://www.youtube.com/embed/W7qWa52k-nE"
+	   width="100%" height="100%" frameborder="0" allowfullscreen>
+	</iframe>
 	</div>
 </div>
