@@ -9,14 +9,13 @@
 	function LoginController($state, LoginService, $firebaseAuth) {
 		
 		this.login = function login(){
-			var ref = new Firebase("https://fiery-torch-4227.firebaseio.com");
-			ref.authWithOAuthPopup("facebook", function(error, authData) {
-  				if (error) {
-   					console.log("Login Failed!", error);
-  				} else {
-    				console.log("Authenticated successfully with payload:", authData);
-  				}
-			});
+			return LoginService.login()
+				.then(function(){
+					console.log("you're in");
+				})
+				.catch(function(){
+					console.log("you're not in");
+				});
 		};
 		// var ref = new Firebase(firebaseUrl);
 		// var authObject = $firebaseAuth(ref);

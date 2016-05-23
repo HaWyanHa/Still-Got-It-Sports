@@ -19,9 +19,9 @@
 			function login(){
 				return ref.authWithOAuthPopup("facebook")
 					.then(function(authData) {
-					console.log(authData);
-					userData = authData;
-					return userData;
+						console.log(authData);
+						userData = authData;
+						return userData;
 					});
 			}
 			
