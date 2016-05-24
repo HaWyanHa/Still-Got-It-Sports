@@ -60,6 +60,18 @@
 
             assert.strictEqual(points, 18, "math is correct" );
         });
+        test("passing math works for male", function(){    
+
+                var points = statCtrl.pasPoints(malePlayer);
+
+            assert.strictEqual(points, 0, "math is correct" );
+        });
+        test("passing math works for male", function(){    
+
+                var points = statCtrl.pasPoints(femalePlayer);
+
+            assert.strictEqual(points, 3, "math is correct" );
+        });
 
 
     });
