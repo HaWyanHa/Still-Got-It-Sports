@@ -78,12 +78,22 @@ img {
 nav {
 	margin-bottom: 3em;
 	clear: both;
-	background-color: rgba(0, 0, 0, 0.2);;
+	background-color: rgba(0, 0, 0, 0.2);
 	padding-top: 1em;
 	padding-bottom: 1em;
 	text-align: center;
 	margin-top: 1em;
 }
+nav a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 3px 2px 5px #000;
+}
+
+nav a:visited {
+	color: white;
+}
+
 li {
 	display: inline;
 	font-size: 1em;
@@ -145,14 +155,6 @@ table td a:visited {
 .center {
 	text-align: center;
 }
-nav a {
-	text-decoration: none;
-	color: white;
-	text-shadow: 3px 2px 5px #000;
-}
-nav a:visited {
-	color: white;
-}
 
 .main-content{
 	background-color: #F5F5F5;
@@ -192,10 +194,19 @@ iframe {
 
 @media screen and (max-width: 640px) {
 	.logo {
-		display: none;
+		display: block;
+		position: initial;
+		margin: auto;
 	}
 	.menu-trigger {
 		display: block;
+		color: #fff;
+		background-color: rgba(0, 0, 0, 0.2);
+		padding: 10px;
+		text-align: center;
+		font-size: 1em;
+		cursor: pointer;
+		text-shadow: 3px 2px 5px #000;
 	}
 	.nav-menu {
 		display: none;
@@ -217,5 +228,11 @@ iframe {
 
 	li:nth-child(3){
 		padding-right: initial;
+	}
+	.login {
+		display: none;
+	}
+	.standings {
+		padding-right: 4em;
 	}
 }
