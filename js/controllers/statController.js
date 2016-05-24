@@ -45,7 +45,7 @@
 			this.defPoints = function defPoints(player) {
 
 				if (player.gender === "female") {
-					return player.tackles + (player.dint * 10) + (player.dtd * 10);
+					return player.tackles + (player.dint * 7) + (player.dtd * 10);
 				} else {
 					return player.tackles + (player.dint * 5) + (player.dtd * 7);
 				}
