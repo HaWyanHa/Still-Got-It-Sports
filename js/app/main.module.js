@@ -51,6 +51,10 @@
 	     			controller: "StatController",
 	     			controllerAs: "stuff"
 	     		})
+	     		.state("navbar", {
+	     			url: "/navbar",
+	     			templateUrl: "html/navbar.html"
+	     		})
 	        	.state("contact", {
 	        		url: "/contact",
 	        		templateUrl: "html/contact.html"

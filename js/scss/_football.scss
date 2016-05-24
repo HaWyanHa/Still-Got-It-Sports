@@ -72,6 +72,9 @@ img {
 }
 
 //navbar css
+.menu-trigger {
+	display: none;
+}
 nav {
 	margin-bottom: 3em;
 	clear: both;
@@ -185,4 +188,34 @@ iframe {
 }
 .results {
 	padding-top: 11em;
+}
+
+@media screen and (max-width: 640px) {
+	.logo {
+		display: none;
+	}
+	.menu-trigger {
+		display: block;
+	}
+	.nav-menu {
+		display: none;
+	}
+	.nav-expanded {
+		display: block;
+	}
+	li {
+		display: block;
+		border-bottom: 2px solid rgba(0, 0, 0, 0.28);
+		margin-right: 10%;
+	}
+	li:last-child {
+		border-bottom: none;
+	}
+	li:nth-child(4){
+		padding-left: initial;
+	}
+
+	li:nth-child(3){
+		padding-right: initial;
+	}
 }
