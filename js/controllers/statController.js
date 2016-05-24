@@ -61,7 +61,13 @@
 
 			this.newPlayer = function newPlayer (playerForm) {
 				console.log(playerForm);
-				PlayerService.createPlayer(this.playerName, this.gender);
+				PlayerService.createPlayer(this.playerName, this.gender)
+					.then(function(){
+						alert("new player added");
+					})
+					.catch(function(){
+						alert("something went wrong");
+					});
 				this.playerName="";
 				this.gender="";
 			};

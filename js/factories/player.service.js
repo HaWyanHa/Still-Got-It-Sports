@@ -35,7 +35,7 @@
 			};
 
 			function createPlayer(playerName, gender) {
-				players.$add({name: playerName, rec: 0, rtd: 0, tackles: 0, dint: 0, dtd: 0, comp: 0, ptd: 0, pint: 0, gplay: 0, gender: gender});
+				return players.$add({name: playerName, rec: 0, rtd: 0, tackles: 0, dint: 0, dtd: 0, comp: 0, ptd: 0, pint: 0, gplay: 0, gender: gender});
 			}
 
 			function savePlayer(playerStats){
