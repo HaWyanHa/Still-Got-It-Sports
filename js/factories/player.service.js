@@ -40,13 +40,13 @@
 
 			function savePlayer(playerStats){
 				var playerObject = new Firebase("https://fiery-torch-4227.firebaseio.com/" + playerStats.$id);
-				playerObject.update({"rec": playerStats.rec, "rtd": playerStats.rtd, "tackles": playerStats.tackles, "dint": playerStats.dint, "dtd": playerStats.dtd, "comp": playerStats.comp, "ptd": playerStats.ptd, "pint": playerStats.pint, "gplay": playerStats.gplay});
+				return playerObject.update({"rec": playerStats.rec, "rtd": playerStats.rtd, "tackles": playerStats.tackles, "dint": playerStats.dint, "dtd": playerStats.dtd, "comp": playerStats.comp, "ptd": playerStats.ptd, "pint": playerStats.pint, "gplay": playerStats.gplay});
 			}
 
 			function deletePlayer(playerStats) {
 				console.log(playerStats);
 				var playerObject = new Firebase("https://fiery-torch-4227.firebaseio.com/" + playerStats.$id);
-				$firebaseObject(playerObject).$remove();
+				return $firebaseObject(playerObject).$remove();
 			}
 		}
 

@@ -74,12 +74,24 @@
 
 			this.editPlayer = function editPlayer(playerStats) {
 				console.log("saving player info", playerStats);
-				PlayerService.savePlayer(playerStats); 
+				PlayerService.savePlayer(playerStats)
+					.then(function(){
+						alert("saving player info");
+					}) 
+					.catch(function(){
+						alert("did not save");
+					});
 			};
 
 			this.removePlayer = function removePlayer(playerStats){
 				console.log("hello");
-				PlayerService.deletePlayer(playerStats);
+				PlayerService.deletePlayer(playerStats)
+					.then(function(){
+						alert("player deleted");
+					})
+					.catch(function(){
+						alert("could not delete player");
+					});
 			};
 
 
