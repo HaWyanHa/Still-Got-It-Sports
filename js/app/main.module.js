@@ -23,8 +23,8 @@
 	        	.state("account", {
 	        		url: "/account",
 	        		templateUrl: 'html/account.html',
-	        		controller: "LoginController",
-	        		controllerAs: "lc"
+	        		controller: "TeamController",
+	        		controllerAs: "tm"
 	        	})
     
 	        	.state("teams", {
