@@ -192,6 +192,19 @@ iframe {
 	padding-top: 11em;
 }
 
+//individual team page
+.top-performers-head{
+	text-align: center;
+	color: white;
+}
+.top-performers {
+	background-color: #0A1C3E;
+	padding: 2%;
+}
+.next-game {
+	text-align: center;
+}
+
 @media screen and (max-width: 640px) {
 	.logo {
 		display: block;
