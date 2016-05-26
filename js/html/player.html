@@ -1,0 +1,48 @@
+<div class="fluid-container">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/005/0a1/112/26fea54.jpg">
+					</div>
+					<div class="col-sm-6">
+						<h4>Shine Wang</h4>
+						<p><a href="">Blue Team</a></p>
+						<p>Ht: 5'11"</p>
+						<p>Wt: 175</p>
+						<p>Age: 25</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+			<h3>Awards</h3>
+			<ul>
+				<li>Best Offensive Player</li>
+				<li>Best Drinking Team</li>
+			</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<table ng-controller="PersonController as pc">
+					<thead>
+						<tr>
+							<th colspan="2">Recieving</th>
+						</tr>
+						<tr>
+							<th>Rec</th>
+							<th>TD</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="catch in pc.all">
+							<td>{{catch.rec}}</td>
+							<td>{{catch.rtd}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
