@@ -73,6 +73,14 @@
             assert.strictEqual(points, 3, "math is correct" );
         });
 
+        test("can create a player", function(){    
+
+                var player = {"playerName": "ryan", "gender": "male"};
+                var points = statCtrl.newPlayer(player);
+
+            assert.ok(player, "player is created" );
+        });
+
 
     });
 })();
