@@ -18,7 +18,7 @@
 					</thead>
 					<tbody>
 						<tr ng-repeat="bar in tm.team | orderBy:'-wins'">
-							<td><a href="">{{bar.color}}</a></td>
+							<td><a ui-sref="account">{{bar.color}}</a></td>
 							<td>{{bar.wins}}</td>
 							<td>{{bar.loss}}</td>
 							<td>{{tm.gamesBehind(bar)}}</td>
@@ -75,7 +75,7 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
-								<td><a href="">{{foo.name}}</a></td>
+								<td><a ui-sref="player">{{foo.name}}</a></td>
 								<td>{{foo.rec}}</td>
 								<td>{{foo.rtd}}</td>
 								<td>{{stuff.addPoints(foo)}}</td>
@@ -99,7 +99,7 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
-								<td><a href="">{{foo.name}}</a></td>
+								<td><a ui-sref="player">{{foo.name}}</a></td>
 								<td>{{foo.tackles}}</td>
 								<td>{{foo.dint}}</td>
 								<td>{{foo.dtd}}</td>
@@ -151,7 +151,7 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:8 | filter:{gender:'female'}">
-								<td><a href="">{{foo.name}}</a></td>
+								<td><a ui-sref="player">{{foo.name}}</a></td>
 								<td>{{foo.rec}}</td>
 								<td>{{foo.rtd}}</td>
 								<td>{{stuff.addPoints(foo)}}</td>
