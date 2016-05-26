@@ -91,17 +91,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="catch in pc.person">
+						<tr>
 							<td>Spring 2016</td>
 							<td>{{pc.seasonPoints("rec")}}</td>
-							<td>{{catch.rtd}}</td>
-							<td>{{catch.tackles}}</td>
-							<td>{{catch.dint}}</td>
-							<td>{{catch.dtd}}</td>
-							<td>{{catch.comp}}</td>
-							<td>{{catch.ptd}}</td>
-							<td>{{catch.pint}}</td>
-							<td>{{pc.calculatePoints(catch)}}</td>
+							<td>{{pc.seasonPoints("rtd")}}</td>
+							<td>{{pc.seasonPoints("tackles")}}</td>
+							<td>{{pc.seasonPoints("dint")}}</td>
+							<td>{{pc.seasonPoints("dtd")}}</td>
+							<td>{{pc.seasonPoints("comp")}}</td>
+							<td>{{pc.seasonPoints("ptd")}}</td>
+							<td>{{pc.seasonPoints("pint")}}</td>
+							<td>{{pc.seasonPoints("pc.calculatePoints(catch")}}</td>
 						</tr>
 					</tbody>
 				</table>				

@@ -124,7 +124,7 @@
 						</thead>
 						<tbody>
 							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
-								<td><a href="">{{foo.name}}</a></td>
+								<td><a ui-sref="player">{{foo.name}}</a></td>
 								<td>{{foo.comp}}</td>
 								<td>{{foo.ptd}}</td>
 								<td>{{foo.pint}}</td>

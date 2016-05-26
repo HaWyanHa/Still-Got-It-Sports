@@ -24,5 +24,15 @@
 			return rec + (rtd * 5) + tackles + (dint * 5) + (dtd * 7) + comp + (ptd * 3) - (pint * 3);
 			
 		};
+
+		this.seasonPoints = function seasonPoints(stat) {
+			var total = 0;
+			this.person.forEach(function(element){
+				console.log(element, stat, element[stat]);
+				total = total + element[stat];
+
+			}); 
+			return total;
+		};
 	}
 })();
