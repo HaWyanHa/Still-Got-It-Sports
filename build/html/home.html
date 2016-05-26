@@ -1,0 +1,382 @@
+<div class="container-fluid">			
+	<div class="container">
+		<div class="row">
+			<article class="col-sm-8">
+					<h2 class="standings"><div class="standings-bar">Standings</div></h2>
+				<table ng-controller="TeamController as tm" class="table table-striped">
+					<thead>
+						<tr>
+							<th></th>
+							<th>W</th>
+							<th>L</th>
+							<th>GB</th>
+							<th>PF</th>
+							<th>PA</th>
+							<th>Streak</th>
+							<th>Opp Record</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="bar in tm.team | orderBy:'-wins'">
+							<td><a href="">{{bar.color}}</a></td>
+							<td>{{bar.wins}}</td>
+							<td>{{bar.loss}}</td>
+							<td>{{tm.gamesBehind(bar)}}</td>
+							<td>{{bar.pf}}</td>
+							<td>{{bar.pa}}</td>
+							<td>{{bar.streak}}</td>
+							<td>{{bar.opp}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+			<aside class="col-sm-4 player-week">
+				<h3>Players of the Week</h3>
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="http://starrstruckcomedy.com/wp-content/uploads/2016/01/comedy-charity-event-at-4corners-04-1-e1453720332894.jpg">
+						</div>
+						<div class="col-me-8">
+							<h4><a href="">Ryan Ha</a></h4>
+							<h5>23 Fantasy Points</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="https://i1.sndcdn.com/avatars-000103968704-kjy7yj-t500x500.jpg">
+						</div>
+						<div class="col-me-8">
+							<h4><a href="">Amanda Bozian</a></h4>
+							<h5>23 Fantasy Points</h5>
+						</div>
+					</div>
+			</aside>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">			
+	<div class="container">
+		<div class="row">
+			<section class="col-sm-12">
+					<h2 class="leaders"><div class="leaders-bar">League Leaders</div></h2>
+					<h3>Men's Leaders</h3>
+				<article class="col-sm-4">
+					<table ng-controller="StatController as stuff" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="4">Receiving</th>
+							</tr>
+							<tr>
+								<th>Name</th>
+								<th>Rec</th>
+								<th>TD</th>
+								<th>Fantasy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
+								<td><a href="">{{foo.name}}</a></td>
+								<td>{{foo.rec}}</td>
+								<td>{{foo.rtd}}</td>
+								<td>{{stuff.addPoints(foo)}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				<article class="col-sm-4">
+					<table ng-controller="StatController as stuff" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="5">Defense</th>
+							</tr>
+							<tr>
+								<th>Name</th>
+								<th>Tackles</th>
+								<th>Int</th>
+								<th>TD</th>
+								<th>Fantasy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
+								<td><a href="">{{foo.name}}</a></td>
+								<td>{{foo.tackles}}</td>
+								<td>{{foo.dint}}</td>
+								<td>{{foo.dtd}}</td>
+								<td>{{stuff.addPoints(foo)}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				<article class="col-sm-3">	
+					<table ng-controller="StatController as stuff" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="5">Passing</th>
+							</tr>
+							<tr>
+								<th>Name</th>
+								<th>Comp</th>
+								<th>TD</th>
+								<th>Int</th>
+								<th>Fantasy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:3 | filter:{gender:'male'}">
+								<td><a href="">{{foo.name}}</a></td>
+								<td>{{foo.comp}}</td>
+								<td>{{foo.ptd}}</td>
+								<td>{{foo.pint}}</td>
+								<td>{{stuff.addPoints(foo)}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+			</section>
+			<section class="col-sm-12">
+				<h3>Women's Leaders</h3>
+				<article class="col-sm-4">
+					<table ng-controller="StatController as stuff" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="4">Receiving</th>
+							</tr>
+							<tr>
+								<th>Name</th>
+								<th>Rec</th>
+								<th>TD</th>
+								<th>Fantasy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.recPoints:stuff.sortReverse | limitTo:8 | filter:{gender:'female'}">
+								<td><a href="">{{foo.name}}</a></td>
+								<td>{{foo.rec}}</td>
+								<td>{{foo.rtd}}</td>
+								<td>{{stuff.addPoints(foo)}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				<article class="col-sm-4">
+					<table ng-controller="StatController as stuff" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="5">Defense</th>
+							</tr>
+							<tr>
+								<th>Name</th>
+								<th>Tackles</th>
+								<th>Int</th>
+								<th>TD</th>
+								<th>Fantasy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.defPoints:stuff.sortReverse | limitTo:7 | filter:{gender:'female'}">
+								<td><a href="">{{foo.name}}</a></td>
+								<td>{{foo.tackles}}</td>
+								<td>{{foo.dint}}</td>
+								<td>{{foo.dtd}}</td>
+								<td>{{stuff.addPoints(foo)}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+				<article class="col-sm-3">	
+					<table ng-controller="StatController as stuff" class="table table-striped">
+						<thead>
+							<tr>
+								<th colspan="5">Passing</th>
+							</tr>
+							<tr>
+								<th>Name</th>
+								<th>Comp</th>
+								<th>TD</th>
+								<th>Int</th>
+								<th>Fantasy</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="foo in stuff.player | orderBy:stuff.pasPoints:stuff.sortReverse | limitTo:8 | filter:{gender:'female'}">
+								<td><a href="">{{foo.name}}</a></td>
+								<td>{{foo.comp}}</td>
+								<td>{{foo.ptd}}</td>
+								<td>{{foo.pint}}</td>
+								<td>{{stuff.addPoints(foo)}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</article>
+			</section>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<section class="col-sm-12">
+				<h2 class="matchup"><div class="matchup-bar">Week 13 Matchups</div></h2>
+				<article class="row">
+					<div class="col-sm-4">
+						<div class="row">
+							<div class="col-sm-5">
+								<img src="http://teamuptutor.com/wp-content/uploads/2016/03/giants-logo-new-york-giants-logo-white-1024x768.jpg">
+							</div>
+							<div class="col-sm-7">
+								<h4>Blue Team</h4>
+								<p>10-2</p>
+								<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+								<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 game-deets">
+						<h3>VS</h3>
+						<p>June 15th, 2016</p>
+						<p>10:00 am</p>
+						<p>Capitol Hill</p>
+					</div>
+					<div class="col-sm-4">
+						<div class="row home-team">
+							<div class="col-sm-7">
+								<h4>Red Team</h4>
+								<p>10-2</p>
+								<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+								<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+							</div>
+							<div class="col-sm-5">
+								<img src="http://fullhdpictures.com/wp-content/uploads/2015/05/Atlanta-Falcons-Logo.jpg">
+							</div>
+						</div>
+					</div>
+				</article>
+			<br>
+			<article class="row">
+				<div class="col-sm-4">
+					<div class="row">
+						<div class="col-sm-5">
+							<img src="http://www.sports-logos-screensavers.com/user/Miami_Dolphins_2013.jpg">
+						</div>
+						<div class="col-sm-7">
+							<h4>Green Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 game-deets">
+					<h3>VS</h3>
+					<p>June 15th, 2016</p>
+					<p>10:00 am</p>
+					<p>Capitol Hill</p>
+				</div>
+				<div class="col-sm-4">
+					<div class="row home-team">
+						<div class="col-sm-7">
+							<h4>White Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+						<div class="col-sm-5">
+							<img src="http://cdn-7.famouslogos.us/images/dallas-cowboys-logo.jpg">
+						</div>
+					</div>
+				</div>
+			</article>			
+			</div>
+			<br>
+			<article class="row">
+			
+				<div class="col-sm-4">
+					<div class="row">
+						<div class="col-sm-5">
+							<img src="http://logodatabases.com/wp-content/uploads/2012/05/oakland-raiders-logo-wallpaper.jpg">
+						</div>
+						<div class="col-sm-7">
+							<h4>Black Table</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 game-deets">
+					<h3>VS</h3>
+					<p>June 15th, 2016</p>
+					<p>10:00 am</p>
+					<p>Capitol Hill</p>
+				</div>
+				<div class="col-sm-4">
+					<div class="row home-team">
+						<div class="col-sm-7">
+							<h4>Yellow Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+						<div class="col-sm-5">
+							<img src="http://www.findthatlogo.com/wp-content/uploads/2011/10/green-bay-packers-logo-nfl.gif">
+						</div>
+					</div>
+				</div>			
+			</article>
+			<br>
+			<article class="row">
+				<div class="col-sm-4">
+					<div class="row">
+						<div class="col-sm-5">
+							<img src="http://vignette1.wikia.nocookie.net/callofduty/images/a/a1/Minnesota-Vikings-Logo.jpg/revision/latest?cb=20111111055412">
+						</div>
+						<div class="col-sm-7">
+							<h4>Purple Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 game-deets">
+					<h3>VS</h3>
+					<p>June 15th, 2016</p>
+					<p>10:00 am</p>
+					<p>Capitol Hill</p>
+				</div>
+				<div class="col-sm-4">
+					<div class="row home-team">
+						<div class="col-sm-7">
+							<h4>Brown Team</h4>
+							<p>10-2</p>
+							<p>Last Played: <span class="last-played"><a href="">Green Team</a></span></p>
+							<p>Top Player: <span class=""><a href="">Ryan Ha</a></span></p>
+						</div>
+						<div class="col-sm-5">
+							<img src="http://614now.com/wp-content/uploads/2015/02/10996996_10153153864099684_1139852189341442151_n-e1424809134882.jpg">
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>			
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8">
+			<h2 class="last"><div class="last-bar">Last Week's Highlights</div></h2>
+			<iframe src="https://www.youtube.com/embed/iCa6ffVw8KM"
+			   width="100%" height="100%" frameborder="0" allowfullscreen>
+			</iframe>
+		</div>
+		<div class="col-sm-4 results">
+			<h3>Results</h3>
+			<p><a href="">Blue Team</a> beat <a href="">Green Team</a> 20-10</p>
+			<p><a href="">Yellow Team</a> beat <a href="">Black Team</a> 20-10</p>
+			<p><a href="">White Team</a> beat <a href="">Red Team</a> 20-10</p>
+			<p><a href="">Orange Team</a> beat <a href="">Purple Team</a> 20-10</p>
+		</div>
+	</div>
+</div>

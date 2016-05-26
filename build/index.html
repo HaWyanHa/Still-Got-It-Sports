@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="football">
+<head>
+	<title>Sports League</title>
+	<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<script src='https://cdn.firebase.com/js/client/2.4.2/firebase.js'></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+	<script src="//connect.facebook.net/en_US/sdk.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+
+</head>
+<body>
+	<button ng-controller="LoginController as lc" class="login" ng-click="lc.login()">Login/Sign Up</button>
+	<img class="logo" src="http://hugsbyha.com/wp-content/uploads/2016/05/SGIS1.png">
+	<span class="menu-trigger">Menu</span>
+	<nav class="nav-menu">
+		<ul>
+			<li><a ui-sref="account">My Account</a></li>
+			<li><a ui-sref="teams">Teams</a></li>
+			<li><a ui-sref="schedule">Schedule</a></li>
+			<li><a ui-sref="players">Players</a></li>
+			<li><a ui-sref="rules">League Rules</a></li>
+			<li><a ui-sref="contact">Contact Us</a></li>
+		</ul>
+	</nav>
+	<section class="main-content">
+		<section ui-view></section>
+	</section>
+</body>
+</html>

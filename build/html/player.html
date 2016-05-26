@@ -1,0 +1,111 @@
+<div class="fluid-container">
+	<div class="container">
+		<div class="row person-profile">
+			<div class="col-sm-6">
+				<div class="row">
+					<div class="col-sm-6">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/005/0a1/112/26fea54.jpg">
+					</div>
+					<div class="col-sm-6">
+						<h4>Shine Wang</h4>
+						<p><a href="">Blue Team</a></p>
+						<p>Ht: 5'11"</p>
+						<p>Wt: 175</p>
+						<p>Age: 25</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+			<h3>Awards</h3>
+			<ul>
+				<li>Best Offensive Player</li>
+				<li>Best Drinking Team</li>
+			</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="leaders"><div class="leaders-bar">Season Stats</div></h2>
+				<table class="table table-striped table-hover" ng-controller="PersonController as pc">
+					<thead>
+						<tr>
+							<th></th>
+							<th colspan="2">Recieving</th>
+							<th colspan="3">Defense</th>
+							<th colspan="3">Passing</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th>Week</th>
+							<th>Rec</th>
+							<th>TD</th>
+							<th>Tackles</th>
+							<th>Int</th>
+							<th>TD</th>
+							<th>Comp</th>
+							<th>TD</th>
+							<th>Int</th>
+							<th>Points</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="catch in pc.person">
+							<td>{{$index + 1}}. {{catch.team}}</td>
+							<td>{{catch.rec}}</td>
+							<td>{{catch.rtd}}</td>
+							<td>{{catch.tackles}}</td>
+							<td>{{catch.dint}}</td>
+							<td>{{catch.dtd}}</td>
+							<td>{{catch.comp}}</td>
+							<td>{{catch.ptd}}</td>
+							<td>{{catch.pint}}</td>
+							<td>{{pc.calculatePoints(catch)}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="leaders"><div class="leaders-bar">Career Stats</div></h2>
+				<table class="table table-striped table-hover" ng-controller="PersonController as pc">
+					<thead>
+						<tr>
+							<th></th>
+							<th colspan="2">Recieving</th>
+							<th colspan="3">Defense</th>
+							<th colspan="3">Passing</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th>Season</th>
+							<th>Rec</th>
+							<th>TD</th>
+							<th>Tackles</th>
+							<th>Int</th>
+							<th>TD</th>
+							<th>Comp</th>
+							<th>TD</th>
+							<th>Int</th>
+							<th>Points</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="catch in pc.person">
+							<td>Spring 2016</td>
+							<td>{{pc.seasonPoints("rec")}}</td>
+							<td>{{catch.rtd}}</td>
+							<td>{{catch.tackles}}</td>
+							<td>{{catch.dint}}</td>
+							<td>{{catch.dtd}}</td>
+							<td>{{catch.comp}}</td>
+							<td>{{catch.ptd}}</td>
+							<td>{{catch.pint}}</td>
+							<td>{{pc.calculatePoints(catch)}}</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+	</div>
+</div>
